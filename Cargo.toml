@@ -28,5 +28,16 @@ coveralls = { repository = "eldruin/smbus-pec-rs", branch = "master", service = 
 [features]
 lookup-table = []
 
+[[bench]]
+name = "benchmarks"
+harness = false
+
+[dev-dependencies]
+criterion = "0.3"
+rand = "0.6"
+
+[profile.bench]
+debug = true # for perf
+
 [profile.release]
 lto = true
