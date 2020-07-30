@@ -25,28 +25,49 @@ jobs:
             - binutils-dev
             - cmake
 
+    - env: TARGET=x86_64-unknown-linux-gnu FEATURES=lookup-table
+
     # Minimum Supported Rust Version
     - env: TARGET=x86_64-unknown-linux-gnu
       rust: 1.31.0
 
+    # Minimum Supported Rust Version
+    - env: TARGET=x86_64-unknown-linux-gnu FEATURES=lookup-table
+      rust: 1.31.0
+
+
     # Raspberry Pi 1
     - env: TARGET=arm-unknown-linux-gnueabi DISABLE_EXAMPLES=1 DISABLE_TESTS=1
+    - env: TARGET=arm-unknown-linux-gnueabi DISABLE_EXAMPLES=1 DISABLE_TESTS=1 FEATURES=lookup-table
 
     # Raspberry Pi 2, 3, etc
     - env: TARGET=armv7-unknown-linux-gnueabihf DISABLE_EXAMPLES=1 DISABLE_TESTS=1
+    - env: TARGET=armv7-unknown-linux-gnueabihf DISABLE_EXAMPLES=1 DISABLE_TESTS=1 FEATURES=lookup-table
 
     # Bare metal
     - env: TARGET=thumbv6m-none-eabi
+    - env: TARGET=thumbv6m-none-eabi FEATURES=lookup-table
     - env: TARGET=thumbv7em-none-eabi
+    - env: TARGET=thumbv7em-none-eabi FEATURES=lookup-table
     - env: TARGET=thumbv7em-none-eabihf
+    - env: TARGET=thumbv7em-none-eabihf FEATURES=lookup-table
     - env: TARGET=thumbv7m-none-eabi
+    - env: TARGET=thumbv7m-none-eabi FEATURES=lookup-table
 
-  allow_failures:
     - env: TARGET=x86_64-unknown-linux-gnu
       rust: nightly
 
-    - env: TARGET=x86_64-unknown-linux-musl
+    - env: TARGET=x86_64-unknown-linux-gnu  FEATURES=lookup-table
       rust: nightly
+
+    - env: TARGET=x86_64-unknown-linux-musl  FEATURES=lookup-table
+      rust: nightly
+
+    - env: TARGET=x86_64-unknown-linux-musl  FEATURES=lookup-table
+      rust: nightly
+
+  allow_failures:
+  - rust: nightly
 
 install:
   bash ci/install.sh
