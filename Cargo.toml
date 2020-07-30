@@ -1,0 +1,28 @@
+[package]
+name = "smbus-pec"
+version = "0.1.0" # remember to update html_root_url
+authors = ["Diego Barrios Romero <eldruin@gmail.com>"]
+repository = "https://github.com/eldruin/smbus-pec-rs"
+license = "MIT OR Apache-2.0"
+description = "Minimal implementation of SMBus Packet Error Code calculation algorithm."
+readme = "README.md"
+keywords = ["smbus", "pec", "checksum", "algorithm"]
+categories = ["embedded", "checksum", "no-std"]
+homepage = "https://github.com/eldruin/smbus-pec-rs"
+documentation = "https://docs.rs/smbus-pec"
+include = [
+    "/**/*.rs",
+    "/Cargo.toml",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE-MIT",
+    "/LICENSE-APACHE",
+]
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "eldruin/smbus-pec-rs", branch = "master" }
+coveralls = { repository = "eldruin/smbus-pec-rs", branch = "master", service = "github" }
+
+[profile.release]
+lto = true
