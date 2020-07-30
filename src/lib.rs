@@ -12,6 +12,17 @@
 //! [smbus]: https://en.wikipedia.org/wiki/System_Management_Bus
 //! [smbus-pec]: https://en.wikipedia.org/wiki/System_Management_Bus#Packet_Error_Checking
 //!
+//! ## How this crate compares to others
+//!
+//! There is a number of crates implementing CRC algorithms but their intention is to
+//! implement several of them like CRC-8, CRC-16, CRC-32, be configurable, use
+//! acceleration via SIMD instructions, etc.
+//!
+//! This crate provides a portable and non-configurable implementation of exactly one
+//! algorithm: the one used for SMBus PEC and no more than that.
+//! This should allow the compiler to make good optimizations and allows for use of the
+//! algorithm in any target architecture with minimal code bloat.
+//!
 //! # Usage
 //!
 //! ## Send command with a value to an address
