@@ -98,7 +98,7 @@ mod default_impl {
 }
 
 #[cfg(not(feature = "lookup-table"))]
-pub use default_impl::{pec, Pec};
+pub use crate::default_impl::{pec, Pec};
 
 #[cfg(feature = "lookup-table")]
 mod lookup_table_impl {
@@ -122,7 +122,7 @@ mod lookup_table_impl {
 }
 
 #[cfg(feature = "lookup-table")]
-pub use lookup_table_impl::{pec, Pec};
+pub use crate::lookup_table_impl::{pec, Pec};
 
 #[cfg(feature = "lookup-table")]
 include!(concat!(env!("OUT_DIR"), "/lookup_table.rs"));
