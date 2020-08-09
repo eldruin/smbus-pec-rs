@@ -16,7 +16,7 @@ The PEC is calculated over the whole transmission including address and read/wri
 The polynomial used is `x^8 + x^2 + x + 1`, which corresponds to [CRC-8-ATM HEC][crc8]
 initialized to zero.
 
-# How this crate compares to others
+## How this crate compares to others
 
 There is a number of crates implementing CRC algorithms but their intention is to
 be configurable, generic, use acceleration via SIMD instructions, etc.
@@ -29,7 +29,7 @@ algorithm in any target architecture with minimal code bloat.
 
 This makes this crate specially well suited for use in `no_std` environments.
 
-# Pre-calculated lookup table
+## Pre-calculated lookup table
 
 A faster version of the algorithm is provided through the use of a pre-calculated
 lookup table. This can be enabled through the `lookup-table` feature.
