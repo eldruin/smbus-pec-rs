@@ -28,10 +28,10 @@ coveralls = { repository = "eldruin/smbus-pec-rs", branch = "master", service = 
 lookup-table = []
 
 [build-dependencies]
-embedded-crc-macros = { git = "https://github.com/eldruin/embedded-crc-macros-rs" }
+embedded-crc-macros = "0.1"
 
 [dependencies]
-embedded-crc-macros = { git = "https://github.com/eldruin/embedded-crc-macros-rs" }
+embedded-crc-macros = "0.1"
 
 [dev-dependencies]
 criterion = "0.3"
