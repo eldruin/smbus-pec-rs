@@ -2,7 +2,7 @@
 
 [![crates.io](https://img.shields.io/crates/v/smbus-pec.svg)](https://crates.io/crates/smbus-pec)
 [![Docs](https://docs.rs/smbus-pec/badge.svg)](https://docs.rs/smbus-pec)
-[![Build Status](https://travis-ci.com/eldruin/smbus-pec-rs.svg?branch=master)](https://travis-ci.com/eldruin/smbus-pec-rs)
+[![Build Status](https://github.com/eldruin/smbus-pec-rs/workflows/Build/badge.svg)](https://github.com/eldruin/smbus-pec-rs/actions?query=workflow%3ABuild)
 [![Coverage Status](https://coveralls.io/repos/github/eldruin/smbus-pec-rs/badge.svg?branch=master)](https://coveralls.io/github/eldruin/smbus-pec-rs?branch=master)
 
 This is a portable minimal implementation of the [System Management Bus (SMBus)][smbus]

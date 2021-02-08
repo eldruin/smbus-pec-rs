@@ -20,10 +20,6 @@ include = [
 ]
 edition = "2018"
 
-[badges]
-travis-ci = { repository = "eldruin/smbus-pec-rs", branch = "master" }
-coveralls = { repository = "eldruin/smbus-pec-rs", branch = "master", service = "github" }
-
 [features]
 lookup-table = []
 
