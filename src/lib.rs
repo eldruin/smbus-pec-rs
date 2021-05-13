@@ -106,7 +106,7 @@
 //! smbus.write(ADDR, &[command, value, checksum]);
 //! ```
 //!
-//! ## Perform request-response using function
+//! ## Perform request-response using hasher
 //!
 //! A typical use case for this would be reading the value of a register.
 //! To do this, a write with the register address is sent, followed by a read.
