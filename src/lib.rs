@@ -144,7 +144,7 @@
 mod default_impl {
     use embedded_crc_macros::{crc8, crc8_hasher};
     crc8!(
-        pec,
+        fn pec,
         7,
         0,
         "Calculate SMBus Packet Error Code over transmitted data.\
@@ -152,7 +152,7 @@ mod default_impl {
     );
 
     crc8_hasher!(
-        Pec,
+        struct Pec,
         7,
         0,
         "Calculate SMBus Packet Error Code over transmitted data. `core::hash::Hasher` implementation.\
@@ -171,16 +171,18 @@ mod lookup_table_impl {
     use embedded_crc_macros::{crc8_hasher_lookup_table, crc8_lookup_table};
 
     crc8_lookup_table!(
-        pec,
+        fn pec,
         0,
+        LOOKUP_TABLE,
         "Calculate SMBus Packet Error Code over transmitted data.\
         \n\nThe input data array must contain the complete message including address and read/write bit.
         \n\nThis implementation uses a lookup table and is much faster at the cost of some space."
     );
 
     crc8_hasher_lookup_table!(
-        Pec,
+        struct Pec,
         0,
+        LOOKUP_TABLE,
         "Calculate SMBus Packet Error Code over transmitted data. `core::hash::Hasher` implementation.\
         \n\nThe input data array must contain the complete message including address and read/write bit.\
         \n\nNote that the hasher holds an internal state so that it is possible to call `write()` \
