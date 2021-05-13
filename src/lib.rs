@@ -136,7 +136,7 @@
 //! ```
 //!
 
-#![doc(html_root_url = "https://docs.rs/smbus-pec/0.1.0")]
+#![doc(html_root_url = "https://docs.rs/smbus-pec/1.0.0")]
 #![deny(unsafe_code, missing_docs)]
 #![no_std]
 
